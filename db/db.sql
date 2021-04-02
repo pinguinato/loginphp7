@@ -1,0 +1,10 @@
+CREATE SCHEMA IF NOT EXISTS `login_system_php_7` DEFAULT CHARACTER SET utf8;
+
+USE `login_system_php_7`;
+
+CREATE TABLE IF NOT EXISTS `login_system_php_7`.`users` (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
